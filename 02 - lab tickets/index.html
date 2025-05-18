@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tickets</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ticket de Cine</title>
+  <link rel="stylesheet" href="/02 - lab tickets/styles/style.css" />
 </head>
 <body>
+    <h1>Bienvenido a IronCinema!</h1>
+  <div class="container">Por favor, rellena el siguiente formulario para conseguir tu ticket:
+    <form id="ticket-form">
+        <label>Nombre:</label>
+        <input type="text" id="name-input" required />
+        <label>Fecha:</label>
+        <input type="date" id="date-input" required />
+        <label>Fila:</label>
+        <input type="text" id="row-input" required />
+        <label>Asiento:</label>
+        <input type="number" id="seat-input" required/>
 
+    <button type="button" onclick="trasladar();">Enviar</button>
+    </form>
     
-    <script src="/01 - lab tickets/script.js"></script>
+    <div class="ticket">
+      <img src="/02 - lab tickets/imgs/ticket-bg.png" alt="Fondo del ticket" class="ticket-bg" />
+      <div class="name" id="ticket-name"></div>
+      <div class="date" id="ticket-date"></div>
+      <div class="seat" id="ticket-seat"></div>
+    </div>
+  </div>
+
+  <script src="/02 - lab tickets/script.js"></script>
 </body>
 </html>
